@@ -1,0 +1,165 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+h2
+{
+        font-family: "Protest Revolution", sans-serif;
+        font-weight: 400;
+        font-style:italic;
+        font-size: x-large;
+}
+
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(6, 61, 125);
+}
+
+.container
+{
+    position:absolute;
+    top:120px;
+}
+
+.cup
+{
+    /* position:relative; */
+    width:200px;
+    height:220px;
+    background: linear-gradient(#f9f9f9,#f9f9f9);
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+}
+
+.eye
+{
+   position:absolute;
+   height: 1.87em;;
+   width:3.75em;
+   background-color: transparent;
+   top:3em;
+   gap:15px;
+   left:23px;
+   border:0.62em solid #272048;
+   border-radius: 3.75em 3.75em 0 0;
+   border-bottom: none;
+}
+
+.eye-r
+{
+    left:6.8em;
+} 
+
+.mouth
+{
+    position: absolute;
+    background-color: #c24c4c;
+    border-radius: 1.25em 1.25em 9.37em 9.37em;
+    height:3em;
+    width:7em;
+    bottom:4em;
+    left:2.5em;
+}
+
+.top
+{
+    position:absolute;
+    top:-30px;
+    left:0;
+    width:100%;
+    height:60px;
+    background: linear-gradient(#f9f9f9,#f9f9f9);
+    border-radius: 50%;
+}
+
+.inside
+{
+    position:absolute;
+    top:5px;
+    left:10px;
+    height:50px;
+    width: calc(100% - 20px);
+    border-radius: 50%;
+    background: linear-gradient(#f9f9f9,#f9f9f9);
+    overflow: hidden;
+}
+
+.coffee
+{
+    position: absolute;
+    top: 20px;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#6c2a12,#63250f);
+    border-radius: 50%;
+}
+
+.hold
+{
+    position:absolute;
+    right:-40px;
+    top:20px;
+    width:100px;
+    height:120px;
+    border:25px solid #f9f9f9;
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-radius: 50%;
+    transform: rotate(40deg);
+}
+
+.steam
+{
+    position:relative;
+    display: flex;
+    z-index: 1;
+    padding:0 20px;
+}
+
+.steam span
+{
+    position:relative;
+    bottom: 50px;
+    display: block;
+    margin:5px 2px 20px;
+    min-width: 3px;
+    height:100px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter:blur(8px);
+    animation-delay: calc(var(--i)* -0.5s) ;
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%
+    {
+        opacity:1;
+    }
+    50%
+    {
+        transform:translateY(-150px) scaleX(5);
+    }
+    95%
+    {
+        opacity:0;
+    }
+    100%
+    {
+        transform:translateY(-300px) scaleX(10);
+    }
+}
